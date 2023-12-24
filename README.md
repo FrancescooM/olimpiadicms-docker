@@ -5,6 +5,7 @@ All credits to Dockerfile goes to [@tico88612](https://github.com/tico88612)
 # Contest Management System Docker Version
 
 Edited version of Contest Managment System for [ITTS E. Scalfaro](https://www.ittsscalfaro.edu.it/)
+
 Main Website [olimpiadi.francescomancuso.it](https://olimpiadi.francescomancuso.it/)
 
 ## Support
@@ -74,7 +75,7 @@ Follow this [manual](https://docs.docker.com/engine/install/ubuntu/#install-usin
 1. Clone this project (include submodules)
 
 ```
-git clone --recursive https://github.com/tico88612/cms-docker.git
+git clone --recursive https://github.com/FrancescooM/olimpiadicms-docker.git
 ```
 
 2. If you want to change worker number, edit `config/cms.conf` and `docker-compose.yml`
@@ -111,14 +112,8 @@ Ranking: http://localhost:8890
 
 7. Have fun!
 
-## Other & TO-DO List
-
-Pull Request Welcome!
-
-- [ ] GitHub Action Build & Push Image
-- [ ] Helm Chart Version (Kubernetes)
-
 ## Reference project
 
 - [np-overflow/k8s-cms](https://github.com/np-overflow/k8s-cms)
 - [ioi/cms](https://github.com/ioi/cms)
+- [tico88612's Docker version](https://github.com/tico88612/cms-docker)
