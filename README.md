@@ -1,12 +1,12 @@
-## Credits
-
-All credits to Dockerfile goes to [@tico88612](https://github.com/tico88612)
-
 # Contest Management System Docker Version
 
 Edited version of Contest Managment System for [ITTS E. Scalfaro](https://www.ittsscalfaro.edu.it/)
 
 Main Website [olimpiadi.francescomancuso.it](https://olimpiadi.francescomancuso.it/)
+
+## Credits
+
+All credits to Dockerfile goes to [@tico88612](https://github.com/tico88612)
 
 ## Support
 
