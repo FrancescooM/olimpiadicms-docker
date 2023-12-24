@@ -7,3 +7,6 @@
 [submodule "dependency/--force"]
 	path = dependency/--force
 	url = https://github.com/FrancescooM/olimpiadicms.git
+[submodule "olimpiadicms"]
+	path = olimpiadicms
+	url = https://github.com/FrancescooM/olimpiadicms
