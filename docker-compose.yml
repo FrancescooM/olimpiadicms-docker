@@ -193,6 +193,8 @@ services:
     image: "cms-web-contest:latest"
     container_name: "cms-web-contest"
     restart: unless-stopped
+    volumes:
+      - "/css:/home/francesco/olimpiadisito/css"
     ports:
       - "8888:8888"
     expose:
