@@ -8,7 +8,7 @@ ENV HOME=/cms
 WORKDIR /cms
 
 # copy cms system
-COPY dependency/cms /cms
+COPY dependency/olimpiadicms /cms
 
 # copy cms config
 COPY config /cms/config
