@@ -14,14 +14,6 @@ All credits to Dockerfile goes to [@tico88612](https://github.com/tico88612)
 | :--- | :---: |
 | Ubuntu 20.04 | ✅ |
 | Ubuntu 22.04 | ✅, Need to enable cgroup v1 |
-| Windows Subsystem Linux (Ubuntu 22.04) | ✅ |
-| macOS | ⚠️ |
-
-macOS doesn't support isolate (a.k.a. cmsWorker) running, because cgroups doesn't support macOS.
-
-## Architecture
-
-TBD
 
 ## Requirement
 
@@ -102,15 +94,6 @@ docker buildx build -f images/cms-base/Dockerfile . -t cms-base:latest
 docker compose up -d
 ```
 
-6. Login to Admin system & Create contest.
-
-```
-Contest: http://localhost:8888
-Admin: http://localhost:8889
-Ranking: http://localhost:8890
-```
-
-7. Have fun!
 
 ## Reference project
 
