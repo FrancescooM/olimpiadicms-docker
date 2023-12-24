@@ -76,16 +76,13 @@ git clone --recursive https://github.com/FrancescooM/olimpiadicms-docker.git
 
 ```bash
 cp .env.example .env
-vim .env # Edit .env
+nano .env # Edit .env
 ```
 
 4. Build `cms-base:latest` image.
 
 ```bash
-# Docker build
 docker build -f images/cms-base/Dockerfile . -t cms-base:latest
-# If you have install Buildx, you can try this
-docker buildx build -f images/cms-base/Dockerfile . -t cms-base:latest
 ```
 
 5. Up all service
