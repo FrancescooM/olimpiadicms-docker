@@ -9,6 +9,8 @@ services:
       - ".env"
     volumes:
       - "./data/db:/var/lib/postgresql/data"
+    networks:
+      - cms-network
   cms-db-init:
     build: 
       context: .
@@ -20,6 +22,8 @@ services:
     env_file: 
       - ".env"
       - "config/config.env"
+    networks:
+      - cms-network
   cms-log:
     build: 
       context: .
@@ -34,6 +38,8 @@ services:
       - "29000"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
   cms-scoring:
     build: 
       context: .
@@ -48,6 +54,8 @@ services:
       - "28500"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
   cms-resource:
     build: 
       context: .
@@ -62,6 +70,8 @@ services:
       - "28000"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
   cms-proxy:
     build: 
       context: .
@@ -77,6 +87,8 @@ services:
     depends_on:
       - cms-db
       - cms-web-ranking
+    networks:
+      - cms-network
   cms-printing:
     build: 
       context: .
@@ -91,6 +103,8 @@ services:
       - "25123"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
   cms-evaluation:
     build: 
       context: .
@@ -105,6 +119,8 @@ services:
       - "25000"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
   cms-checker:
     build: 
       context: .
@@ -132,6 +148,8 @@ services:
       - cms-worker-1
       - cms-worker-2
       - cms-worker-3
+    networks:
+      - cms-network
         
   # web services
   cms-web-ranking:
@@ -150,6 +168,8 @@ services:
       - "8890:8890"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
   cms-web-admin:
     build: 
       context: .
@@ -182,6 +202,8 @@ services:
       - "config/config.env"
     depends_on:
       - cms-db
+    networks:
+      - cms-network
 
   # workers
   cms-worker-0:
@@ -201,6 +223,8 @@ services:
       - CMS_WORKER_0=0.0.0.0
     depends_on:
       - cms-db
+    networks:
+      - cms-network
     privileged: true
 
   cms-worker-1:
@@ -220,6 +244,8 @@ services:
       - CMS_WORKER_1=0.0.0.0
     depends_on:
       - cms-db
+    networks:
+      - cms-network
     privileged: true
 
   cms-worker-2:
@@ -239,6 +265,8 @@ services:
       - CMS_WORKER_2=0.0.0.0
     depends_on:
       - cms-db
+    networks:
+      - cms-network
     privileged: true
 
   cms-worker-3:
@@ -258,4 +286,10 @@ services:
       - CMS_WORKER_3=0.0.0.0
     depends_on:
       - cms-db
+    networks:
+      - cms-network
     privileged: true
+
+networks:
+  cms-network:
+    driver: bridge
