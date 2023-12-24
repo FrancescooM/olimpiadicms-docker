@@ -1,3 +1,7 @@
+## Credits
+
+All credits to Dockerfile goes to @tico88612
+
 # Contest Management System Docker Version
 
 This version is following [ioi/cms](https://github.com/ioi/cms).
