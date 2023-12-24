@@ -1,3 +1,6 @@
 [submodule "dependency/cms"]
 	path = dependency/cms
 	url = https://github.com/ioi/cms.git
+[submodule "dependency/olimpiadicms"]
+	path = dependency/olimpiadicms
+	url = https://github.com/FrancescooM/olimpiadicms.git
